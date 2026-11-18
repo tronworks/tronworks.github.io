@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- tronworks mark — Ops Grid palette (see mini-projects/docs/theme.md) -->
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d8e4e6" stroke-opacity="0.07" stroke-width="1.5"/>
+    </pattern>
+    <radialGradient id="wash" cx="50%" cy="46%" r="60%">
+      <stop offset="0" stop-color="#34c3c9" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#34c3c9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="#0b1013"/>
+  <rect width="512" height="512" fill="url(#grid)"/>
+  <rect width="512" height="512" fill="url(#wash)"/>
+
+  <!-- console corner brackets -->
+  <g fill="none" stroke="#2a9298" stroke-width="10" stroke-linecap="square">
+    <path d="M52 116V52H116"/>
+    <path d="M396 52H460V116"/>
+    <path d="M460 396V460H396"/>
+    <path d="M116 460H52V396"/>
+  </g>
+
+  <!-- TW monogram: T bar whose stem drops into the centre apex of a W signal trace -->
+  <g filter="url(#glow)" fill="none" stroke="#34c3c9" stroke-width="34" stroke-linejoin="miter" stroke-miterlimit="10" stroke-linecap="square">
+    <path d="M140 150H372"/>
+    <path d="M256 150V250"/>
+    <path d="M128 222L192 372L256 250L320 372L384 222"/>
+  </g>
+
+  <!-- signal ticks -->
+  <g fill="#34c3c9">
+    <rect x="236" y="410" width="10" height="10"/>
+    <rect x="252" y="410" width="10" height="10" opacity="0.6"/>
+    <rect x="268" y="410" width="10" height="10" opacity="0.3"/>
+  </g>
+</svg>
